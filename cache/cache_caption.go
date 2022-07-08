@@ -18,6 +18,9 @@ var (
 
 	//go:embed captions/ro_ro
 	caption_ro_ro json.RawMessage
+
+	//go:embed captions/es_es
+	caption_es_es json.RawMessage
 )
 
 func GetCaptions(code string) json.RawMessage {
@@ -30,6 +33,8 @@ func GetCaptions(code string) json.RawMessage {
 		return caption_it_it
 	case "ro_ro":
 		return caption_ro_ro
+	case "es_es":
+		return caption_es_es
 	}
 
 	// default to english, if language code was not valid
@@ -37,5 +42,5 @@ func GetCaptions(code string) json.RawMessage {
 }
 
 func GetCaptionLanguageCodes() []string {
-	return []string{"en_us", "de_de", "it_it", "ro_ro"}
+	return []string{"en_us", "de_de", "it_it", "ro_ro", "es_es"}
 }

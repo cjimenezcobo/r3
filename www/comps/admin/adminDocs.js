@@ -49,7 +49,7 @@ let MyAdminDocs = {
 			let req  = new XMLHttpRequest();
 			
 			let lang = this.settings.languageCode;
-			if(lang !== 'en_us' && lang !== 'de_de')
+			if(lang !== 'en_us' && lang !== 'de_de' && lang !== 'es_es')
 				lang = 'en_us';
 			
 			let url = `/docs/${lang}_admin.html`;

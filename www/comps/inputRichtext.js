@@ -87,6 +87,7 @@ let MyInputRichtext = {
 			switch(this.settings.languageCode) {
 				case 'en_us': return 'en'; break;
 				case 'de_de': return 'de'; break;
+				case 'es_es': return 'es'; break;
 			}
 			return 'en';
 		},

@@ -108,13 +108,13 @@ let MyLogin = {
 						@keyup.enter="authenticate"
 						v-model="username"
 						v-focus
-						placeholder="username"
+						:placeholder="message.usernamePlaceholder[language]"
 					/>
 					<input class="default" type="password"
 						@keyup="badAuth = false"
 						@keyup.enter="authenticate"
 						v-model="password"
-						placeholder="password"
+						:placeholder="message.passwordPlaceholder[language]"
 					/>
 					<div class="actions">
 						<my-button
@@ -169,35 +169,54 @@ let MyLogin = {
 			
 			// default messages
 			language:'en_US',
-			languages:['de','en_US'],
+			languages:['de','en_US','es'],
 			message:{
 				error:{
 					de:'Ein Fehler ist aufgetreten - bitte erneut versuchen',
-					en_US:'An error occurred - please try again'
+					en_US:'An error occurred - please try again',
+					es:'Ha ocurrido un error - por favor intentelo de nuevo'
 				},
 				httpMode:{
 					de:'Verbindung ist nicht verschlüsselt',
-					en_US:'Connection is not encrypted'
+					en_US:'Connection is not encrypted',
+					es:'La conexión not está cifrada'
 				},
 				loading:{
 					de:'Am Laden...',
-					en_US:'Loading...'
+					en_US:'Loading...',
+					es:'Cargando...'
 				},
 				login:{
 					de:'Anmelden',
-					en_US:'Login'
+					en_US:'Login',
+					es:'Iniciar sesión'
+					
 				},
 				maintenanceMode:{
 					de:'Wartungsmodus ist aktiv',
-					en_US:'Maintenance mode is active'
+					en_US:'Maintenance mode is active',
+					es:'El modo de mantenimiento está activado'
+					
 				},
 				stayLoggedIn:{
 					de:'Angemeldet bleiben',
-					en_US:'Stay logged in'
+					en_US:'Stay logged in',
+					es:'Permanecer conectado'
 				},
 				wsBroken:{
 					de:'Warten auf Serververbindung',
-					en_US:'Waiting for server connection'
+					en_US:'Waiting for server connection',
+					es:'Esperando la conexión del servidor'
+				},
+				usernamePlaceholder:{
+					de:'Benutzername',
+					en_US:'Username',
+					es:'Nombre de usuario'
+				},
+				passwordPlaceholder:{
+					de:'Passwort',
+					en_US:'Password',
+					es:'Contraseña'
 				}
 			}
 		};
